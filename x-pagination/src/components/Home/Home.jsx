@@ -19,7 +19,6 @@ const Home = () => {
       setDataTable(result);
     } catch (error) {
       setError("Fetching error to retrieve data:", error);
-      alert(error);
     }
   };
 
@@ -50,7 +49,7 @@ const Home = () => {
     <div>
       <h1>Employee Data Table</h1>
       {error ? (
-        <div className="error">{error}</div>
+        <div className="error">{alert("failed to fetch data")}</div>
       ) : (
         <>
         <div>
