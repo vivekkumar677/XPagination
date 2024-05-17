@@ -19,6 +19,7 @@ const Home = () => {
       setDataTable(result);
     } catch (error) {
       setError("Fetching error to retrieve data:", error);
+      alert(error);
     }
   };
 
