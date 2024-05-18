@@ -49,7 +49,7 @@ const Home = () => {
     <div>
       <h1>Employee Data Table</h1>
       {error ? (
-        <div className="error">{alert("failed to fetch data")}</div>
+        <div className="error">{error}</div>
       ) : (
         <>
         <div>
