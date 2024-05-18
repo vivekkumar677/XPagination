@@ -18,7 +18,8 @@ const Home = () => {
       console.log(result);
       setDataTable(result);
     } catch (error) {
-      setError("Fetching error to retrieve data:", error);
+    //   setError("failed to fetch data", error);
+      alert("failed to fetch data");
     }
   };
 
@@ -48,9 +49,6 @@ const Home = () => {
   return (
     <div>
       <h1>Employee Data Table</h1>
-      {error ? (
-        <div className="error">{error}</div>
-      ) : (
         <>
         <div>
           <table>
@@ -80,7 +78,7 @@ const Home = () => {
             <button onClick={handleNext}>Next</button>
           </div>
         </>
-      )}
+      )
     </div>
   );
 };
