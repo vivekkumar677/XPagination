@@ -3,10 +3,8 @@ import axios from "axios";
 import styles from "./Home.module.css";
 
 const Home = () => {
-  const [count, setCount] = useState();
   const [dataTable, setDataTable] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [error, setError] = useState(null);
   const employeesPerPage = 10;
 
   const fetchData = async () => {
@@ -19,7 +17,8 @@ const Home = () => {
       setDataTable(result);
     } catch (error) {
     //   setError("failed to fetch data", error);
-      alert("failed to fetch data");
+      alert("failed to fetch data",error);
+      console.log("alert",error)
     }
   };
 
@@ -78,7 +77,6 @@ const Home = () => {
             <button onClick={handleNext}>Next</button>
           </div>
         </>
-      )
     </div>
   );
 };
